@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* *{
+    border: #000 solid 1px;
+} */
+
+body{
+    margin: 0%;
+    font-family: "Open Sans", sans-serif;
+    display: grid;
+    grid:
+        "header" 506px
+        "section-01" 573px
+        "section-02" 507px
+        "section-03" 507px
+        "section-04" 560px
+        "footer" 140px;
+}
+
+picture{
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    grid-area: header;
+    box-sizing: border-box;
+    padding: 60px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("/assets/images/Header\ Background\ small.png");
+    background-size: 100% 100%;
+    color: #FFF;
+}
+
+header>h1{
+    font-family: "Luckiest Guy";
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+button{
+    width: 100%;
+    height: 52px;
+    border: transparent;
+    border-radius: 28px;
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.download{
+    background: #FFF;
+}
+
+.open{
+    background: #000;
+    color: #FFF;
+}
+
+.section-01, .section-02, .section-03, .section-04{
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-01{
+    grid-area: section-01;
+}
+
+.section-02{
+    grid-area: section-02;
+    background: #F6F6F6;
+}
+
+.section-03{
+    grid-area: section-03;
+
+}
+
+.section-04{
+    grid-area: section-04;
+    background: #F6F6F6;
+}
+
+.section-04 h1{
+    font-family: "Luckiest Guy";
+    size: 2rem;
+    font-weight: 400;
+}
+
+footer{
+    grid-area: footer;
+    background: #23272A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 640px) {
+    body{
+        display: grid;
+        grid:
+            "header" 459px
+            "section-01" 459px
+            "section-02" 448px
+            "section-03" 448px
+            "section-04" 744px
+            "footer" 140px;
+    }
+
+    header{
+        background-image: url("/assets/images/Header\ Background.png");
+        align-items: center;
+    }
+
+    header>p{
+        width: 50vw;
+    }
+
+    .buttons-container{
+        width: 40vw;
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    button{
+        width: auto;
+        overflow: hidden;
+        padding: 0 50px;
+    }
+
+    .section-01, .section-02, .section-03{
+        align-items: center;
+        padding: 15px 10vw;
+        gap: 16px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    
+    .section-02{
+        grid-template-areas: "text img";
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .section-02>div {
+        grid-area: text;
+    }
+    
+    .section-02>picture {
+        grid-area: img;
+    }
+
+    .section-04{
+        justify-content: center;
+        text-align: center;
+        padding: 15px 20vw;
+    }
+}
